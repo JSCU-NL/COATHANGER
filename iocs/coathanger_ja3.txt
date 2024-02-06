@@ -1,0 +1,18 @@
+# This JA3-hash is a fingerprint for connections originating
+# from FortiGate devices that support all encryption and
+# hashing algorithms for doing TLS.
+
+# Whereas the far majority of TLS-connections use different
+# parameters, the built-in logging functionality of FortiGate
+# devices seems to make use of identical TLS-parameters,
+# leading to potential false positive results from this JA3
+# hash.
+
+# Therefore, traffic should be judged as legitimate (i.e., as
+# false positive indicator of COATHANGER) if it originates
+# from a FortiGate device and has:
+# − port 541 or 514 as destination port and
+# − an IP address belonging to Fortinet Inc. or a Fortinet
+# device, such as a FortiManager as destination.
+
+339f6adf54e6076d069dcaac54fddc25
