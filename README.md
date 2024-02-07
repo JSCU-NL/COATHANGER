@@ -1,18 +1,18 @@
 # COATHANGER FortiGate IOC Checker
 
 This repository contains:
-1. Indicators of Compromise (IOCs) from the MIVD & AIVD advisory on the [COATHANGER malware](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-aivd-advisory-coathanger-tlp-clear).
+1. Indicators of Compromise (IOCs) from the MIVD & AIVD advisory on the [COATHANGER malware](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-advisory-coathanger-tlp-clear).
 2. The `coathanger.py` script which checks for the presence of these IOCs on a FortiGate disk image using the [Dissect](https://github.com/fox-it/dissect) framework.
 
 The following checks are currently implemented in `coathanger.py`:
-* Known malicious file locations as provided in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-aivd-advisory-coathanger-tlp-clear)
-* YARA rules as provided in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-aivd-advisory-coathanger-tlp-clear)
+* Known malicious file locations as provided in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-advisory-coathanger-tlp-clear)
+* YARA rules as provided in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-advisory-coathanger-tlp-clear)
 * Binaries with differing modification timestamps
 * Non-standard hidden folders in `/data` and `/data2`
 
 > [!WARNING]
 > **Please read the following carefully before taking action on your FortiGate device(s):**
-> * This script only implements a subset of the detection methods described in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-aivd-advisory-coathanger-tlp-clear). It should therefore only be used as an addition to the methods described in the advisory.
+> * This script only implements a subset of the detection methods described in the [advisory](https://www.ncsc.nl/documenten/publicaties/2024/februari/6/mivd-advisory-coathanger-tlp-clear). It should therefore only be used as an addition to the methods described in the advisory.
 > * This script should be run on a forensic disk image of a FortiGate system and **not** on the FortiGate device itself.
 > * This script is by no means the full replacement of a proper forensic investigation. It is possible the script leads to false negatives or false positives. Please use your own judgement before making any decisions based on the output of this tool.
 
